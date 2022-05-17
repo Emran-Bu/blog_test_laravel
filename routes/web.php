@@ -101,3 +101,9 @@ Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function ()
 
 });
 
+// date print route
+
+Route::get('/date_print', [testController::class, 'datePrint']);
+
+Route::post('/dateMonthly', [testController::class, 'datePrint']);
+
