@@ -51,6 +51,9 @@ Route::prefix('web')->group(function (){
 // id pass
 Route::get('/pass/{id}', [testController::class, 'idPass'])->where('id', '[0-9]+');
 
+//optionalNamePass
+Route::get('/pass/{name?}', [testController::class, 'optionalNamePass']);
+
 // array return
 Route::get('/arr', [testController::class, 'arr']);
 

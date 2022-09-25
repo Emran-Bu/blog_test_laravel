@@ -27,6 +27,12 @@ class testController extends Controller
         echo $id;
     }
 
+    // optionalNamePass pass
+    public function optionalNamePass ($name = '')
+    {
+        echo $name;
+    }
+
     // array return
     public function arr (Request $request)
     {
@@ -45,7 +51,7 @@ class testController extends Controller
         $sql = DB::table('students')->where($date, 'students.created_at')->get();
 
         dd($sql);
-        
+
         return view('date_print', compact($sql));
     }
 
